@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>mademoiselle7luna</title>
+  <link rel="stylesheet" type="text/css" href="projects.css">
+  
+  <script type="text/javascript" src="file.js">
+  </script>
+</head>
+<body>
+  
+  <div class="header">
+    <img src="logo2_2.png">
+    <p>Cookies, recipes, mountains, Javascript</p>
+  </div>
+  
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="#" style="float:right">Contact</a>
+  </div>
+  
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>Kalkulator</h2>
+        <h5>Title description, March 20, 2021</h5>
+        <h1>My calculator</h1>
+        <table border="1" cellpadding="5" cellspacing="5" width="600">
+          <tr align="center">
+            <td>First number</td>
+            <td>Second Number</td>
+            <td>Result</td>
+          </tr>
+          <tr align="center">
+            <td><input name="number1" type="text" size=10 id='num1'/></td>
+            <td><input name="number2" type="text" size=10 id='num2'/></td>
+            <td> <input type="text" id='result' readonly ></td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <button onclick="showresult('1')">+</button>
+              <button onclick="showresult('2')">-</button>
+              <button onclick="showresult('3')">*</button>
+              <button onclick="showresult('4')">/</button>
+              <button onclick="showresult('5')">%</button>
+            </td>
+          </tr>
+          
+        </table>
+        <br>
+        <button onclick="goBack()">Go Back</button>
+        
+      </ul>
+
+      <br><br>
+      <p>Pole kwadratu: </p>
+      <p>Podej a:</p>
+      <input name="a" type="text" id="a"><br>
+      <p>Podej b: </p>
+      <input name="b" type="text" id="b"><br>
+      <button onclick="result()"> Wynik: </button> 
+      <p>Wynik:</p>
+      <input type="text" id='results' readonly>
+    </div>
+    
+    
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Javascript</h2>
+      <p>Co się tu się będzie działo, to hohohoho</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <h3>created by mademoiselle7luna</h3>
+</div>
+
+
+</body>
+</html>
