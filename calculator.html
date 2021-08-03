@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
   <meta charset="UTF-8">
   <title>mademoiselle7luna</title>
-  <link rel="stylesheet" type="text/css" href="projects.css">
-  
+  <link rel="stylesheet" type="text/css" href="style.css">
+
   <script type="text/javascript" src="file.js">
   </script>
 </head>
+
 <body>
-  
+
   <div class="header">
-    <img src="logo2_2.png">
+    <a href="index.html"><img src="logo2_2.png"></a>
     <p>Cookies, recipes, mountains, Javascript</p>
   </div>
-  
+
   <div class="topnav">
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="gallery.html">Gallery</a>
-    <a href="#" style="float:right">Contact</a>
+    <a href="contact.html" style="float:right">Contact</a>
   </div>
-  
+
   <div class="row">
     <div class="leftcolumn">
       <div class="card">
-        <h2>Kalkulator</h2>
+        <h2>Funkcje obliczeniowe</h2>
         <h5>Title description, March 20, 2021</h5>
-        <h1>My calculator</h1>
-        <table border="1" cellpadding="5" cellspacing="5" width="600">
-          <tr align="center">
-            <td>First number</td>
-            <td>Second Number</td>
-            <td>Result</td>
+        <h3>Kalkulator</h3>
+        <table cellpadding="5" cellspacing="5" width="600">
+          <tr>
+            <td>Pierwsza liczba</td>
+            <td>Druga liczba</td>
+            <td>Wynik</td>
           </tr>
-          <tr align="center">
-            <td><input name="number1" type="text" size=10 id='num1'/></td>
-            <td><input name="number2" type="text" size=10 id='num2'/></td>
-            <td> <input type="text" id='result' readonly ></td>
+          <tr>
+            <td><input name="number1" type="text" size=10 id='num1' /></td>
+            <td><input name="number2" type="text" size=10 id='num2' /></td>
+            <td> <input type="text" id='result' readonly></td>
           </tr>
           <tr>
             <td colspan="3">
@@ -48,39 +50,239 @@
               <button onclick="showresult('5')">%</button>
             </td>
           </tr>
-          
+
         </table>
         <br>
-        <button onclick="goBack()">Go Back</button>
-        
-      </ul>
 
-      <br><br>
-      <p>Pole kwadratu: </p>
-      <p>Podej a:</p>
-      <input name="a" type="text" id="a"><br>
-      <p>Podej b: </p>
-      <input name="b" type="text" id="b"><br>
-      <button onclick="result()"> Wynik: </button> 
-      <p>Wynik:</p>
-      <input type="text" id='results' readonly>
+        </ul>
+
+        <br><br>
+
+        <table cellpadding="5" cellspacing="5" width="600">
+          <h3>Wartość bezwzględna</h3>
+          <tr>
+            <td>
+              <p>Podaj liczbę:</p>
+            </td>
+            <td><input name="number" type="text" id="number"></td>
+          </tr>
+          <tr>
+            <td><button onclick="absolute()">Wartość bezwzględna:</button></td>
+            <td><input type="text" id="absolute_value" readonly></td>
+          </tr>
+
+        </table>
+
+        <br>
+
+        <table cellpadding="5" cellspacing="5" width="600">
+          <h3>Pierwiastki i potęgi</h3>
+          <tr>
+            <td>
+              <p>Podaj liczbę:</p>
+            </td>
+            <td><input name="n" type="text" id="n"></td>
+          </tr>
+          <tr>
+            <td>Podaj wykładnik:</td>
+            <td><input name="exponent" type="text" id="exponent"></td>
+            </td>
+          </tr>
+          <tr>
+            <td>Podaj stopień pierwiastka:</td>
+            <td><input name="degree" type="text" id="dg"></td>
+          </tr>
+          <tr>
+            <td><button onclick="sqrt_rr()">Spierwiastkuj liczbę:</button></td>
+            <td><input type="text" id="sqrt_rr" readonly></td>
+          </tr>
+          <tr>
+            <td><button onclick="exponentiation()">Spotęguj liczbę:</button></td>
+            <td><input type="text" id="exp" readonly></td>
+          </tr>
+        </table>
+
+        <br>
+
+        <img src="gallery/pierwiastki.png" alt="wzory" height="150">
+        <br>
+        <table cellpadding="5" cellspacing="5" width="600">
+          <tr>
+            <td>Podaj podstawę pierwiastka:</td>
+            <td><input name="base" type="text" id="base"></td>
+          </tr>
+          <tr>
+            <td>Podaj wykładnik lub licznik wykładnika:</td>
+            <td><input name="exponent_1" type="text" id="exp_1"></td>
+          </tr>
+          <tr>
+            <td>Podaj mianownik wyładnika: </td>
+            <td><input name="denominator" type="text" id="denominator"></td>
+          </tr>
+          <tr>
+            <td><button onclick="square_root()">Oblicz pierwiastek:</button></td>
+            <td><input type="text" id="square_root_result" readonly></td>
+          </tr>
+        </table>
+
+        <br><br>
+
+        <img src="gallery/potegowanie.png" alt="potegowanie" height="150">
+        <br><br>
+        <table cellpadding="5" cellspacing="5" width="600">
+          <tr>
+            <td>Podaj pierwszą podstawę (a):</td>
+            <td><input name="base_a" type="text" id="base_a"></td>
+          </tr>
+          <tr>
+            <td>Podaj drugą podstawę (a):</td>
+            <td><input name="base2_a" type="text" id="base2_a"></td>
+          </tr>
+          <tr>
+            <td>Podaj r:</td>
+            <td><input name="r" type="text" id="r"></td>
+          </tr>
+          <tr>
+            <td>Podaj s:</td>
+            <td><input name="s" type="text" id="s"></td>
+          </tr>
+          <tr>
+            <td>Podaj b:</td>
+            <td><input name="b_123" type="text" id="b_123"></td>
+          </tr>
+          <tr>
+          <tr>
+            <td><button onclick="exponentiation_2()">Oblicz:</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="exponentiation_4()">Oblicz dla 4-go wzoru: </button></td>
+            <td><input type="text" id="exponentation_2" readonly></td>
+          </tr>
+          <tr>
+            <td><button onclick="exponentiation_5()">Oblicz dla 5-go wzoru: </button></td>
+
+        </table>
+        <br><br>
+
+        <h3>Logarytmy</h3>
+        <img src="gallery/logarytmy.png" alt="logarytmy" height="300">
+        <br><br>
+        <table cellpadding="5" cellspacing="5" width="600">
+          <tr>
+            <td>Podaj a:</td>
+            <td><input name="base_of_logharitm" type="text" id="base_of_logharitm"></td>
+          </tr>
+          <tr>
+            <td>Podaj b:</td>
+            <td><input name="exponent_of_logharitm" type="text" id="exponent_of_logharitm"></td>
+          </tr>
+          <tr>
+            <td>Podaj c:</td>
+            <td><input name="logharitms_of_number_c" type="text" id="logharitms_of_number_c"></td>
+          </tr>
+          <tr>
+            <td>Podaj x:</td>
+            <td><input name="number_x" type="text" id="number_x"></td>
+          </tr>
+          <tr>
+            <td>Podaj y:</td>
+            <td><input name="number_y" type="text" id="number_y"></td>
+          </tr>
+          <tr>
+            <td>Podaj r:</td>
+            <td><input name="number_r" type="text" id="number_r"></td>
+          </tr>
+          <tr>
+            <td><button onclick="logharitms()">Oblicz:</button></td>
+            <td><input type="text" id="result_of_logharitms" readonly></td>
+          </tr>
+        </table>
+        <br><br>
+
+        <table cellpadding="5" cellspacing="5" width="600">
+          <h3>Pole prostokąta </h3>
+          <tr>
+            <td>
+              <p>Podaj a:</p>
+            </td>
+            <td><input name="a" type="text" id="a"><br></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Podaj b: </p>
+            </td>
+            <td><input name="b" type="text" id="b"></td>
+          </tr>
+          <tr>
+            <td><button onclick="rectangle()"> Wynik: </button></td>
+            <td><input type="text" id="results" readonly></td>
+          </tr>
+          <br>
+
+        </table>
+
+        <br>
+
+        <table cellpadding="5" cellspacing="5" width="600">
+          <h3>Pole trójkąta</h3>
+          <tr>
+            <td>
+              <p>Podaj podstawę:</p>
+            </td>
+            <td><input name="a1" type="text" id="a1"></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Podaj wysokość:</p>
+            </td>
+            <td><input name="h" type="text" id="h"></td>
+          </tr>
+          <tr>
+            <td><button onclick="triangle()">Oblicz:</button></td>
+            <td><input type="text" id="results2" readonly></td>
+          </tr>
+
+        </table>
+
+        <br>
+
+        <table cellpadding="5" cellspacing="5" widtg="600">
+          <h3>Twierdzenie Pitagorasa</h3>
+          <b> a&#178 + b&#178 = c&#178 </b>
+          <br><br>
+          <tr>
+            <td>Podaj pierwszą przyprostokątną:</td>
+            <td><input name="p1" type="text" id="p1"></td>
+          </tr>
+          <tr>
+            <td>Podaj drugą przyprostokątną:</td>
+            <td><input name="p2" type="text" id="p2"></td>
+          </tr>
+          <tr>
+            <td><button onclick="pitagoras()">Oblicz przeciwprostokątną:</button></td>
+            <td><input type="text" id="p3_r" readonly></td>
+          </tr>
+
+        </table>
+      </div>
+      <br>
+      <button onclick="goBack()">Wróć</button>
+
     </div>
-    
-    
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>Javascript</h2>
-      <p>Co się tu się będzie działo, to hohohoho</p>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>Inne</h2>
+        <p><a href="https://github.com/mademoiselle7luna" alt="github">Github</a></p>
+      </div>
+
     </div>
-
   </div>
-</div>
 
-<div class="footer">
-  <h3>created by mademoiselle7luna</h3>
-</div>
+  <div class="footer">
+    <h3>created by mademoiselle7luna</h3>
+  </div>
 
 
 </body>
+
 </html>
